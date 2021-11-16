@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <title>Book Marker</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <meta name="author" content="fatma hafez" />
+    <meta
+      name="description"
+      content="crud system how add , display and delete data"
+    />
+    <meta
+      name="keywords"
+      content="html,css,js,jQuery,book marker, visit website and validation"
+    />
+
+    <!-- icon  -->
+    <link rel="icon" href="img/istockphoto-1187763107-170667a.jpg" />
+
+    <!-- Fontawesome Link -->
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap Link -->
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Page Style Link -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font style Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&family=Nunito+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!------------------- loading screen -------------------------->
+    <section id="loading" class="justify-content-center align-items-center">
+      <div class="lds-ripple spinner">
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+
+    <!--------------------- bookmark-form ------------------------->
+
+    <section class="bookmark-form">
+      <div class="container py-5">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="bookform text-center w-50 py-5 my-5">
+            <div class="form-hd mb-5">
+              <h1>Bookmarker</h1>
+            </div>
+            <div class="bookform-contant">
+              <div class="mb-3 p-2" id="addBookMark">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="siteName"
+                  placeholder="put your favourite site name"
+                />
+                <div class="alert alert-danger" id="siteNameAlert">
+                  BookmarkName must start with capital letter, contains 4:10
+                  characters
+                </div>
+              </div>
+              <div class="mb-3 p-2">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="siteUrl"
+                  placeholder="put your favourite site url"
+                />
+                <div class="alert alert-danger" id="siteUrlAlert">
+                  Bookmark URL must start with: (www.), then any char and ends
+                  with (.com, .org or .net)
+                </div>
+              </div>
+              <div class="mb-3 p-2">
+                <button class="btn btn-outline-dark" id="addMarkBtn" disabled>
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <!-------------- to down ----------------------- -->
+        <button id="btnDown" class="btn btn-dark text white rounded-circle p-2">
+          <i class="fas fa-arrow-down fa-lg"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-------------- display bookmark -------------------->
+    <section id="displayBookMark" class="w-75 mx-auto p-5 my-4">
+      <div class="row text-center" id="myRow"></div>
+    </section>
+
+    <!-------------- Start Footer ------------------------>
+    <footer>
+      <div class="container">
+        <div class="footer-content py-5 text-center">
+          <p>CopyRight &copy; 2019 Bookmarker</p>
+        </div>
+      </div>
+    </footer>
+
+    <!----------------- to top -------------------------- -->
+    <button id="btnTop" class="btn btn-dark text white rounded-circle p-2">
+      <i class="fas fa-arrow-up fa-lg"></i>
+    </button>
+    <!-- JQuery Link -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- bundle Link -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Page Main Script Link -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
